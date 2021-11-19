@@ -32,7 +32,7 @@
 			<a class="logo" href="index.html"><img src="img/SaberConectar.jpg" alt="logo de Saber Conectar"></a>
         <h1>Cree su cuenta aquí</h1>
 		
-		<form action="" class="formulario" id="formulario">
+		<form action="php/enviar.php" method="POST" class="formulario" id="formulario">
 			
 			<!-- Grupo: Usuario -->
 			<div class="formulario__grupo" id="grupo__usuario">
@@ -117,10 +117,13 @@
 			</div>
 
 			<div class="formulario__grupo formulario__grupo-btn-enviar">
-				<button type="submit" class="formulario__btn">Enviar</button>
+				<button type="submit" name="Enviar" class="formulario__btn">Enviar</button>
 				<p class="formulario__mensaje-exito" id="formulario__mensaje-exito">Formulario enviado exitosamente!</p>
 			</div>
 		</form>
+		
+		
+	    
 	</main>
 </div>
 

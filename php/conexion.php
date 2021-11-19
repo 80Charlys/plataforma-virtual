@@ -1,13 +1,15 @@
 <?php
-
-$server = "localhost";
-$user = "root";
-$pass = "";
-$db = "SaberConectarBD.sql";
- 
-$conexion = new mysqli($server, $user, $pass, $db);
-
-if ($conexion->connect_errno){
-    die ("La conexión ha fallado" . $conexion->connect_errno);
+$servername = "localhost";
+$database = "saber_conectar";
+$username = "root";
+$password = "";
+// Conexion a la base
+$conn = mysqli_connect($servername, $username, $password, $database);
+// Comprobar conexion
+if (!$conn) {
+    die("Conexion fallida: " . mysqli_connect_error());
 }
+echo "Conexion con base de datos exitosa!";
 ?>
+
+include("conexion.php");
